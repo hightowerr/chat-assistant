@@ -2,23 +2,7 @@
 import React, { useEffect } from 'react';
 import { MessageSquare } from 'lucide-react';
 
-interface VoiceflowConfig {
-  verify: {
-    projectID: string;
-  };
-  url: string;
-  versionID: string;
-}
-
-declare global {
-  interface Window {
-    voiceflow: {
-      chat: {
-        load: (config: VoiceflowConfig) => void;
-      };
-    };
-  }
-}
+// Removed local interface and global declaration
 
 const ChatbotUI = () => {
   useEffect(() => {
